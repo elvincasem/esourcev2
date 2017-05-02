@@ -646,11 +646,11 @@ CREATE TABLE `requisition_details` (
   `purpose` text,
   `warehouseid` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`reqid`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 /*Data for the table `requisition_details` */
 
-insert  into `requisition_details`(`reqid`,`requisition_no`,`requisition_date`,`eid`,`userID`,`logtime`,`requisition_status`,`purpose`,`warehouseid`) values (1,'RIS2017-00002','2017-03-09',15,1,'2017-03-12 22:07:37','NONE','right',1),(2,'RIS2017-00003','2017-03-09',31,1,'2017-03-12 22:07:38','NONE','purpose',1),(3,'RIS2017-00004','2017-03-12',0,1,'2017-03-12 22:32:15','NONE','test2',2),(4,'RIS2017-00005','2017-04-11',15,1,'2017-04-11 10:50:17','NONE','',1);
+insert  into `requisition_details`(`reqid`,`requisition_no`,`requisition_date`,`eid`,`userID`,`logtime`,`requisition_status`,`purpose`,`warehouseid`) values (1,'RIS2017-00002','2017-03-09',15,1,'2017-03-12 22:07:37','NONE','right',1),(2,'RIS2017-00003','2017-03-09',31,1,'2017-03-12 22:07:38','NONE','purpose',1),(3,'RIS2017-00004','2017-03-12',0,1,'2017-03-12 22:32:15','NONE','test2',2),(4,'RIS2017-00005','2017-04-11',15,1,'2017-04-11 10:50:17','NONE','',1),(5,'RIS2017-00006','2017-01-01',0,1,'2017-05-03 04:46:53','NONE','test',1),(6,'RIS2017-00007','2017-02-17',17,1,'2017-05-03 04:47:03','NONE','test',1),(7,'RIS2017-00008','2017-05-04',0,1,'2017-05-03 05:22:37','NONE','',1),(8,'RIS2017-00009','2017-03-01',0,1,'2017-05-03 05:22:53','NONE','',1),(9,'RIS2017-00010','2017-03-15',0,1,'2017-05-03 05:22:59','NONE','',1),(10,'RIS2017-00011','2017-01-08',0,1,'2017-05-03 05:23:15','NONE','',1),(11,'RIS2017-00012','2017-01-11',0,1,'2017-05-03 05:23:21','NONE','',1);
 
 /*Table structure for table `requisition_items` */
 
