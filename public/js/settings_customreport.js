@@ -12,8 +12,10 @@ function editfooter(id){
 			//location.reload();
 			document.getElementById("reportmodule").value = data.reportmodule;
 			document.getElementById("divposition").value = data.divposition;
-			document.getElementById("content").value = data.content;
+			//document.getElementById("textarea-ckeditor").innerHTML = data.content;
 			document.getElementById("footerid").value = id;
+			
+			CKEDITOR.instances.content.setData(data.content);
 			
 		}
 	});
@@ -22,8 +24,9 @@ function editfooter(id){
 
 function updatefooter(){
 	//alert("test");
-	var footerid = document.getElementById("footerid").value 
-	var content = document.getElementById("content").value
+	var footerid = document.getElementById("footerid").value;
+	//var content = document.getElementById("content").value;
+	var content = CKEDITOR.instances.content.getData();
 	
 	$.ajax({
 		url: 'customreport/updatefooter',

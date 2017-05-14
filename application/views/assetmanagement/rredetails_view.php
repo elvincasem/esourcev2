@@ -60,7 +60,7 @@ table { page-break-inside:auto }
 </style>
 
 
-<div style="float:left;width:0%;position:relative;left:60px;"><img width="100" src="<?=base_url();?>public/img/ched_logo.png"></div>
+<div style="float:left;width:0%;position:relative;left:60px;"><img width="100" src="<?=base_url();?>public/img/print_logo.png"></div>
 <div style="text-align:center;font-weight:bold;font-size:18px;"><?php echo $header;?></div>
 <br>
 <br>

@@ -50,7 +50,7 @@ class Adjustment_model extends CI_Model
 	
 	public function getadjitems($adjustmentid)
 	{
-		$sql = $this->db->query("SELECT adjustmentitemsid,adjustmentid,action,adjustment_items.itemno,adjustment_items.unit,items.description,qty,update_status,items.unitCost from adjustment_items left join items on adjustment_items.itemno = items.itemNo where adjustmentid='$adjustmentid'");
+		$sql = $this->db->query("SELECT adjustmentitemsid,adjustmentid,action,adjustment_items.itemno,adjustment_items.unit,items.description,qty,update_status,items.unitCost,time_stamp from adjustment_items left join items on adjustment_items.itemno = items.itemNo where adjustmentid='$adjustmentid'");
 		return $sql->result_array();
 		
 		

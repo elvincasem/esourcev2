@@ -55,16 +55,16 @@
                                             <a href="<?=base_url()?>property" class="<?php echo $propertyclass;?>"><i class="fa fa-desktop sidebar-nav-icon"></i>Individual Asset List</a>
                                         </li>
 										<li>
-                                            <a href="<?=base_url()?>par" class="<?php echo $parclass;?>"><i class="fa fa-desktop sidebar-nav-icon"></i>PAR </a>
+                                            <a href="<?=base_url()?>par" class="<?php echo $parclass;?>" data-toggle="tooltip" data-placement="right" title="Property Acknowledgement Receipt"><i class="fa fa-desktop sidebar-nav-icon"></i>PAR </a>
                                         </li>
 										<li>
-                                            <a href="<?=base_url()?>ics" class="<?php echo $icsclass;?>"><i class="fa fa-desktop sidebar-nav-icon"></i>ICS</a>
+                                            <a href="<?=base_url()?>ics" class="<?php echo $icsclass;?>" data-toggle="tooltip" data-placement="right" title="Inventory Custodian Slip"><i class="fa fa-desktop sidebar-nav-icon"></i>ICS</a>
                                         </li>
 										<li>
-                                            <a href="<?=base_url()?>ptr" class="<?php echo $ptrclass;?>"><i class="fa fa-desktop sidebar-nav-icon"></i>PTR</a>
+                                            <a href="<?=base_url()?>ptr" class="<?php echo $ptrclass;?>" data-toggle="tooltip" data-placement="right" title="Property Transfer Report"><i class="fa fa-desktop sidebar-nav-icon"></i>PTR</a>
                                         </li>
 										<li>
-                                            <a href="<?=base_url()?>rre" class="<?php echo $rreclass;?>"><i class="fa fa-desktop sidebar-nav-icon"></i>RRE</a>
+                                            <a href="<?=base_url()?>rre" class="<?php echo $rreclass;?>" data-toggle="tooltip" data-placement="right" title="Receipt of Returned Equipment"><i class="fa fa-desktop sidebar-nav-icon"></i>RRE</a>
                                         </li>
 										
 										<li class="hidden<?php //echo $userssubclass;?>">

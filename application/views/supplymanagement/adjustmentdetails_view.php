@@ -123,7 +123,7 @@
 								</div>
 							<div class="row"></div>
 							<div class="col-lg-3">
-                                   Unit:
+                                   Operation:
 								 <div style="">
 								 <select class="form-control" id="adjfunction">
 									<option value="ADD">ADD (+)</option>
@@ -155,56 +155,67 @@
 						</div>
 						
 						<br>
-						<table id="general-table" class="table table-striped table-bordered table-vcenter">
-                                    <thead>
-                                        <tr>
-                                            
-                                            <th  style="width: 500px;">Item Description</th>
+						 <div class="table-responsive">
+            <table id="example-datatable" class="table table-striped table-bordered table-vcenter table-hover">
+                <thead>
+                    <tr style="text-align:center;">
+                        
+                        <!-- <th style="width:100px;">Delivery ID</th>-->
+                        
+						<th  style="width: 500px;">Item Description</th>
                                             <th  style="width: 220px;">Unit</th>
                                             <th style="width: 120px;">Quantity</th>
                                             <th style="width: 120px;">Action</th>
-                                            <th style="width: 120px;">Price</th>
-                                            <th style="width: 120px;">Amount</th>
+                                            <!--<th style="width: 120px;">Price</th>
+                                            <th style="width: 120px;">Amount</th> -->
+                                            <th style="width: 120px;">Date</th>
 
                                             <th class="text-center"><i class="fa fa-flash"></i></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-									
-									
-									<?php
-									$grandtotal =0;
-									foreach ($adjitems as $adjitems_list):
-									$totalamount = $adjitems_list['unitCost']*$adjitems_list['qty'];
-									echo "<tr>";
-									echo "<td>".$adjitems_list['description']."</td>";
-									echo "<td>".$adjitems_list['unit']."</td>";
-									echo "<td>".$adjitems_list['qty']."</td>";
-									echo "<td>".$adjitems_list['action']."</td>";
-									echo "<td>".number_format($adjitems_list['unitCost'],2)."</td>";
-									echo "<td style='text-align:right;'>".number_format($totalamount,2)."</td>";
-									if($adjitems_list['update_status']==1){
-										$dis = "disabled";
-									}else{
-										$dis ="";
-									}
-									echo "<td class='center'> 
+                        
+                        
+						
+                    </tr>
+                </thead>
+                <tbody>
+				<?php
+					$grandtotal =0;
+					foreach ($adjitems as $adjitems_list):
+					$totalamount = $adjitems_list['unitCost']*$adjitems_list['qty'];
+					echo "<tr>";
+					echo "<td>".$adjitems_list['description']."</td>";
 					
-							
-										
-										<button class='btn btn-danger notification' title='Delete item' id='notification' onClick='deleteadjitem(".$adjitems_list['adjustmentitemsid'].")'  $dis><i class='fa fa-times'></i></button>
-									</td>";
-									echo "</tr>";
-									
-									$grandtotal = $grandtotal + $totalamount;
-									
-									endforeach;
+					echo "<td>".$adjitems_list['unit']."</td>";
+					
+					echo "<td>".$adjitems_list['qty']."</td>";
+					
+					echo "<td>".$adjitems_list['action']."</td>";
+					
+					//echo "<td>".number_format($adjitems_list['unitCost'],2)."</td>";
+				
+					//echo "<td style='text-align:right;'>".number_format($totalamount,2)."</td>";
+						echo "<td>".$adjitems_list['time_stamp']."</td>";
+					if($adjitems_list['update_status']==1){
+						$dis = "disabled";
+					}else{
+						$dis ="";
+					}
+					echo "<td class='center'><button class='btn btn-danger notification' title='Delete item' id='notification' onClick='deleteadjitem(".$adjitems_list['adjustmentitemsid'].")'  $dis><i class='fa fa-times'></i></button></td>";
+					
+					
+					echo "</tr>";
+					
+					$grandtotal = $grandtotal + $totalamount;
+					
+					endforeach;
 									?>
-									
-									
-									<tr><td></td><td></td><td></td><td></td><td style='text-align:right;'><?php echo number_format($grandtotal,2);?></td><td></td></tr>
-									</tbody>
-						</table>
+				
+                    
+                </tbody>
+            </table>
+			
+			<?php //echo number_format($grandtotal,2);?>
+        </div>
+		
 						
 						
 						

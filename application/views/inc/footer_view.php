@@ -9,7 +9,7 @@
 		<script src="<?=base_url()?>public/js/pages/uiTables.js"></script>
 		<script>$(function(){ UiTables.init(); });</script>
 		
-
+		<script src="<?=base_url()?>public/js/plugins/ckeditor/ckeditor.js"></script>
 		
         <script src="<?=base_url()?>public/js/plugins.js"></script>
         <script src="<?=base_url()?>public/js/app.js"></script>

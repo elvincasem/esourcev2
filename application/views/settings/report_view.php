@@ -43,7 +43,9 @@
                         </div>	
 						<label class="col-md-3 control-label text-right">Content</label>
                         <div class="col-md-8">
-                            <textarea class="form-control" id="content" style="height:200px;"></textarea>
+                            <textarea class="form-control ckeditor" id="content" style="height:200px;"></textarea>
+							
+							 
                         </div>	
 						
 	
