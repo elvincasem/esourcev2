@@ -217,23 +217,36 @@ function updateinventory(id){
 	
 	//var requisition_no = reqno;
 	//console.log(requisition_no);
-	$.ajax({
-		url: '../updateinventory',
-		type: 'post',
-		data: {adjustmentid:id},
-		success: function(response) {
-			console.log(response);
-						$('#general-table').load(document.URL +  ' #general-table');
-						$.bootstrapGrowl('<h4><strong>Success!</strong></h4> <p>Item Updated!</p>', {
-							type: 'success',
-							delay: 3000,
-							allow_dismiss: true,
-							offset: {from: 'top', amount: 20}
-						});
-			location.reload();
+	var r = confirm("Are you sure you want to apply the adjustment?");
+    if (r == true) {
+		var person = prompt("Please enter Administrator Password");
+		if (person =='superadmin') {
 			
+			$.ajax({
+				url: '../updateinventory',
+				type: 'post',
+				data: {adjustmentid:id},
+				success: function(response) {
+					console.log(response);
+								$('#general-table').load(document.URL +  ' #general-table');
+								$.bootstrapGrowl('<h4><strong>Success!</strong></h4> <p>Item Updated!</p>', {
+									type: 'success',
+									delay: 3000,
+									allow_dismiss: true,
+									offset: {from: 'top', amount: 20}
+								});
+					location.reload();
+					
+				}
+			});
+		}else{
+			alert("Invalid Password");
 		}
-	});
+		
+    } if(r == false) {
+        //txt = "You pressed Cancel!";
+		
+    }
 	
 	
 }

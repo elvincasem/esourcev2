@@ -29,7 +29,7 @@
 					<button type="button" id="addapr" class="pull-right btn btn-effect-ripple btn-success" href="#printaprmodal" data-toggle="modal" onclick="updateinventory(<?php echo $adjustmentid;?>);"> Update Inventory</button> 
 					&nbsp;
 					
-					<button type="button"  class="btn btn-effect-ripple btn-primary pull-right" onclick="location.reload();" ><i class="fa fa-refresh"></i> Refresh</button>
+					<button type="button"  class="hidden btn btn-effect-ripple btn-primary pull-right" onclick="location.reload();" ><i class="fa fa-refresh"></i> Refresh</button>
 					
 				</div>
 				

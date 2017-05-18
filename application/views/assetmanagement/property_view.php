@@ -70,6 +70,7 @@
 							<option value="SERVICEABLE">SERVICEABLE</option>
 							<option value="UNSERVICEABLE">UNSERVICEABLE</option>
 							<option value="DISPOSED">DISPOSED</option>
+							<option value="CONDEMN">CONDEMN</option>
 							
 						   </select>
                         </div>						
