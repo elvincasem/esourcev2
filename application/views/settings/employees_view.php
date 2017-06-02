@@ -27,7 +27,7 @@
                            <div class="modal-header">
 								
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-								<h3 class="modal-title"><strong>Add Item</strong></h3>
+								<h3 class="modal-title"><strong>Add Employee</strong></h3>
                                 
                             </div> 
                             <div class="modal-body">
@@ -90,7 +90,7 @@
 	<div class="block full">
         <div class="block-title">
 		<h5>Employee List</h5>
-			<button type="button" id="adddelivery" class="pull-right btn btn-effect-ripple btn-primary" href="#adddeliverymodal" data-toggle="modal">Add Item</button>
+			<button type="button" id="adddelivery" class="pull-right btn btn-effect-ripple btn-primary" href="#adddeliverymodal" data-toggle="modal">Add Employee</button>
 			<?php //print_r($heidirectory);?>
         </div>
         <div class="table-responsive">
